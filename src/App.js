@@ -33,8 +33,8 @@ function App() {
   return (
     <div className="App">
       <div>
-        <img className="App-logo" src={logoImg} alt="주사위게임 로고" />
-        <h1 className="App-title">주사위게임</h1>
+        <img className="App-logo" src={logoImg} alt="주사위 게임 로고" />
+        <h1 className="App-title">주사위 게임</h1>
       </div>
       <div>
         <Button className="App-button" color="blue" onClick={handleRollClick}>
