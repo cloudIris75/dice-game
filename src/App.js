@@ -17,20 +17,10 @@ function App() {
   const handleRollClick = () => {
     const nextMyNum = random(6);
     const nextOtherNum = random(6);
-
     setMyHistory([...myHistory, nextMyNum]);
     setOtherHistory([...otherHistory, nextOtherNum]);
-
-    if (myHistory > otherHistory) {
-      setMyClass('Board-winner');
-      setOtherClass('');
-    } else if (myHistory < otherHistory) {
-      setMyClass('');
-      setOtherClass('Board-winner');
-    } else {
-      setMyClass('');
-      setOtherClass('');
-    }
+    setMyClass(nextMyNum > nextOtherNum ? 'Board-winner' : '');
+    setOtherClass(nextOtherNum > nextMyNum ? 'Board-winner' : '');
   };
 
   const handleClearClick = () => {
